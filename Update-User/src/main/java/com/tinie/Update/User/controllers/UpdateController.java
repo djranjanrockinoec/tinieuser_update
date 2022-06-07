@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("api/v1")
@@ -28,7 +29,7 @@ public class UpdateController {
      * Write new user's phone number and name to database
      * @param httpServletRequest An object of type {@link HttpServletRequest} containing all the information about the request.
      * @param requestBody {@link UpdateUserRequest} containing phone number and username
-     * @return A {@link Response} whose payload is an {@link UpdateUserRequest}.
+     * @return A {@link Response} whose payload is a {@link Map}.
      * */
     @PostMapping("add-new-user")
     @ApiOperation(value = "Add new User details to database")
